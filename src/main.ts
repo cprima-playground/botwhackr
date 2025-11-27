@@ -1,3 +1,4 @@
+import "./styles/global.css";
 import Phaser from "phaser";
 import { gameDimensions, worldConfig } from "./config/gameConfig";
 import { BootScene } from "./scenes/BootScene";
