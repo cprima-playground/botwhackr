@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BotWhackr</title>
+    <style>
+      body {
+        margin: 0;
+        background: #04070f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      #game-root {
+        image-rendering: pixelated;
+      }
+    </style>
   </head>
   <body>
-    <div id="game-container"></div>
+    <div id="game-root"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -4,15 +4,10 @@ export const gameDimensions = {
 };
 
 export const gameplayTuning = {
+  runSpeed: 90,
+  jumpVelocity: -310,
   groundHeight: 24,
   resetDelayMs: 900,
-};
-
-export const runnerConstants = {
-  playerX: 80,
-  worldSpeed: 160,
-  jumpVelocity: -260,
-  cameraOffsetX: -40,
 };
 
 export const worldConfig = {

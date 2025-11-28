@@ -1,4 +1,4 @@
-import { runnerConstants } from "../config/gameConfig";
+import { gameplayTuning } from "../config/gameConfig";
 
 export interface ScoreState {
   distance: number;
@@ -27,7 +27,7 @@ export class ScoringSystem {
   tick(delta: number) {
     this.state = {
       ...this.state,
-      distance: this.state.distance + (runnerConstants.worldSpeed * delta) / 1000,
+      distance: this.state.distance + (gameplayTuning.runSpeed * delta) / 1000,
       runtimeMs: this.state.runtimeMs + delta,
     };
     this.publish();

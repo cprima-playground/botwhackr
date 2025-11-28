@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { gameplayTuning } from "../config/gameConfig";
 
 export class LevelGenerator {
   private readonly scene: Phaser.Scene;
@@ -38,9 +39,9 @@ export class LevelGenerator {
     obstacle.setPosition(this.scene.scale.width + Phaser.Math.Between(10, 40), this.groundY - 9);
     if (obstacle.body) {
       const body = obstacle.body as Phaser.Physics.Arcade.Body;
+      body.setVelocityX(-gameplayTuning.runSpeed);
       body.setAllowGravity(false);
       body.setImmovable(true);
-      body.setVelocityX(0);
     }
   }
 
