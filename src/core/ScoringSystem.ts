@@ -1,4 +1,4 @@
-import { runnerConstants } from "../config/gameConfig";
+import { gameplayTuning } from "../config/gameConfig";
 
 export interface ScoreState {
   distance: number;
@@ -9,7 +9,6 @@ export interface ScoreState {
 export class ScoringSystem {
   private readonly emitter: Phaser.Events.EventEmitter;
   private state: ScoreState = { distance: 0, runtimeMs: 0, deaths: 0 };
-  private currentSpeed = runnerConstants.worldSpeed;
 
   constructor(emitter: Phaser.Events.EventEmitter) {
     this.emitter = emitter;
@@ -25,14 +24,10 @@ export class ScoringSystem {
     this.publish();
   }
 
-  setSpeed(speed: number) {
-    this.currentSpeed = speed;
-  }
-
   tick(delta: number) {
     this.state = {
       ...this.state,
-      distance: this.state.distance + (this.currentSpeed * delta) / 1000,
+      distance: this.state.distance + (gameplayTuning.runSpeed * delta) / 1000,
       runtimeMs: this.state.runtimeMs + delta,
     };
     this.publish();

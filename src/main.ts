@@ -1,4 +1,3 @@
-import "./styles/global.css";
 import Phaser from "phaser";
 import { gameDimensions, worldConfig } from "./config/gameConfig";
 import { BootScene } from "./scenes/BootScene";
@@ -10,14 +9,10 @@ const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
   width: gameDimensions.width,
   height: gameDimensions.height,
-  parent: "game-container",
+  parent: "game-root",
   backgroundColor: worldConfig.backgroundColor,
   pixelArt: true,
   render: { antialias: false },
-  scale: {
-    mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
-  },
   physics: {
     default: "arcade",
     arcade: {

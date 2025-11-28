@@ -29,11 +29,6 @@ root
 - If the player does nothing for a while after taking control, autoplay can resume automatically.
 - The UI scene shows distance, elapsed time, death count, and the current control mode text.
 
-## Keyboard shortcuts
-- **Jump:** Space, Up Arrow, W, or Z (mouse/touch click also jumps and hands over control)
-- **Mute/unmute:** M
-- **Pause/resume physics:** P
-
 ## Next steps
 - Swap placeholder textures for final pixel art and audio assets served from `/public/assets`.
 - Expand level generator with pooled platforms/enemies and more nuanced autoplay heuristics.
